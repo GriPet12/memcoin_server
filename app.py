@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 # Завантажити модель при старті
 try:
-    model = joblib.load('memcoin_graduation_model.pkl')
-    with open('features.txt', 'r') as f:
+    model = joblib.load('memcoin_model.pkl')
+    with open('feature_names.txt', 'r') as f:
         feature_names = [line.strip() for line in f.readlines()]
     print("Model loaded successfully")
 except Exception as e:
